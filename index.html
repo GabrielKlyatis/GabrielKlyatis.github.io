@@ -65,6 +65,9 @@
     .button-link.cv { background: #990000; border-color: #990000; color: #fff; padding: 12px 22px; min-height: 56px; font-size: 19px; font-weight: 500; border-radius: 8px; }
     .button-link.cv:hover { background: #780000; border-color: #780000; color: #fff; text-decoration: none; }
     .button-link.cv svg { width: 25px; height: 25px; flex-shrink: 0; stroke-width: 1.5; }
+    .social-link { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #CFD7E5; border-radius: 50%; background: #fff; color: #011F5B; transition: background-color .2s, border-color .2s, color .2s; }
+    .social-link:hover { background: var(--soft); border-color: #990000; color: #990000; text-decoration: none; }
+    .social-link svg { display: block; width: 20px; height: 20px; fill: currentColor; }
     .photo-column { align-self: start; padding-top: 10px; }
     .photo-frame { width: 100%; min-height: 220px; position: relative; border: 1px solid #D8DDE8; border-radius: 13px; overflow: hidden; background: linear-gradient(150deg,#F2F4F8 0%,#E5EAF3 100%); }
     .photo-frame::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 5px rgba(255,255,255,.2); border-radius: inherit; pointer-events: none; }
@@ -162,10 +165,16 @@
               My research interests lie in developing perception learning systems for autonomous robots. I am especially interested in multimodal and bio-inspired sensing, including the integration of visual and acoustic perception to enable robots to better understand, navigate, and interact with complex real-world environments.
             </p>
           </div>
-          <div class="actions" aria-label="Curriculum vitae">
+          <div class="actions" aria-label="Curriculum vitae and social profiles">
             <a class="button-link cv" href="Gabriel%20Klyatis%20-%20CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Gabriel Klyatis's curriculum vitae (PDF, opens in a new tab)">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h8l4 4V21.5H6a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2Z"/><path d="M14 2.5v5h5"/><path d="M7.5 15.5c1.3-1 3.2-3.5 3.5-5.5.2-1.5-.6-2-1.1-1-.6 1.5 1 5.1 2.4 6.6 1.5 1.4 2.9 1.6 3.4 1.1.7-.8-1.3-1.2-3.1-1-2.2.2-4.2 1.2-5.4 1.9"/></svg>
               Curriculum Vitae
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/gabriel-klyatis-b10778155" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)" title="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8.2 18.5H5.4V9.6h2.8v8.9ZM6.8 8.4a1.62 1.62 0 1 1 0-3.24 1.62 1.62 0 0 1 0 3.24ZM18.6 18.5h-2.8v-4.3c0-1-.02-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.4H10V9.6h2.7v1.2h.04c.38-.72 1.3-1.5 2.7-1.5 2.9 0 3.45 1.9 3.45 4.4v4.8Z"/></svg>
+            </a>
+            <a class="social-link" href="https://github.com/GabrielKlyatis" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)" title="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.02 10.02 0 0 0 22 12c0-5.52-4.48-10-10-10Z"/></svg>
             </a>
           </div>
         </div>
