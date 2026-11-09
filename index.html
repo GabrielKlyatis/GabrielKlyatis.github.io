@@ -50,14 +50,16 @@
     .nav { display: flex; gap: clamp(16px, 3vw, 30px); align-items: center; }
     .nav a { font-size: 13px; font-weight: 600; letter-spacing: .02em; color: #ffffff; }
     .nav a:hover { color: #8DE7EB; text-decoration: underline; }
-    .hero { padding: 78px 0 67px; border-bottom: 1px solid var(--line); background: #16233B; }
+    .hero { padding: 78px 0 67px; border-bottom: 1px solid #D4DCE4; background: #E9EEF2; color: #12233D; }
     .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 355px; align-items: center; gap: clamp(28px, 4vw, 58px); }
     .eyebrow { display: inline-flex; gap: 10px; align-items: center; margin: 0 0 14px; color: var(--accent-deep); font-size: 11px; letter-spacing: .17em; font-weight: 800; text-transform: uppercase; }
     .eyebrow::before { content: ""; display: block; width: 22px; height: 1px; background: var(--accent); }
     h1 { font-size: clamp(32px, 4vw, 43px); font-weight: 760; letter-spacing: -1.65px; line-height: 1.25; margin: 0 0 13px; }
-    .hero-subtitle { font-weight: 640; font-size: 16px; letter-spacing: -.1px; color: #A9B7C8; margin: 0 0 26px; }
+    .hero-subtitle { font-weight: 640; font-size: 16px; letter-spacing: -.1px; color: #44576A; margin: 0 0 26px; }
     .intro { max-width: 700px; }
-    .intro p { margin: 0 0 16px; color: var(--body); font-size: 15px; line-height: 1.88; }
+    .intro p { margin: 0 0 16px; color: #44576A; font-size: 15px; line-height: 1.88; }
+    .hero a:not(.button-link) { color: #0B6973; }
+    .hero a:not(.button-link):hover { color: #084E56; }
     .intro p:last-child { margin-bottom: 0; }
     .actions { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; margin-top: 26px; }
     .button-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 39px; padding: 8px 15px; font-size: 13px; font-weight: 700; border: 1px solid #425471; color: #F4F7FB; border-radius: 7px; background: #1D2B45; transition: background-color .2s, border-color .2s; }
@@ -77,9 +79,9 @@
     .section { padding: 56px 0 0; }
     .section-heading { margin: 0 0 25px; display: flex; align-items: center; gap: 16px; font-size: 22px; font-weight: 750; letter-spacing: -.7px; color: #F4F7FB; }
     .section-heading::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-    #contact { background: #FFFFFF; padding-bottom: 76px; }
-    #contact .section-heading { color: #12233D; }
-    #contact .section-heading::after { background: #DCE7EC; }
+    #contact { background: #16233B; padding-bottom: 76px; }
+    #contact .section-heading { color: #F4F7FB; }
+    #contact .section-heading::after { background: #2A3954; }
     .section-lead { margin: -11px 0 27px; color: var(--body); font-size: 14px; }
     .interest-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 15px; }
     .interest-card { border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 22px 20px 20px; min-height: 191px; }
@@ -99,11 +101,11 @@
     .project h3 { margin: 1px 0 4px; font-size: 16px; letter-spacing: -.2px; line-height: 1.5; }
     .project .meta { font-size: 12px; font-weight: 700; color: #A9B7C8; margin: 0 0 8px; }
     .project p:last-child { margin: 0; font-size: 14px; color: #A9B7C8; }
-    .contact-box { padding: 26px 29px; border: 1px solid #DCE7EC; border-left: 4px solid #36C7D0; border-radius: var(--radius); background: #F4F8FA; }
-    .contact-box p { color: #44576A; margin: 0 0 12px; font-size: 14px; }
-    .contact-box a { font-weight: 700; color: #0E7882; }
-    .footer { margin-top: 0; border-top: 1px solid #DCE7EC; background: #FFFFFF; }
-    .footer-inner { padding: 24px 0 30px; display: flex; justify-content: space-between; gap: 12px; color: #6B7C8F; font-size: 12px; }
+    .contact-box { padding: 26px 29px; border: 1px solid #2A3954; border-left: 4px solid #36C7D0; border-radius: var(--radius); background: #1D2B45; }
+    .contact-box p { color: #D6E0EB; margin: 0 0 12px; font-size: 14px; }
+    .contact-box a { font-weight: 700; color: #36C7D0; }
+    .footer { margin-top: 0; border-top: 1px solid #2A3954; background: #16233B; }
+    .footer-inner { padding: 24px 0 30px; display: flex; justify-content: space-between; gap: 12px; color: #A9B7C8; font-size: 12px; }
     .footer a { color: #36C7D0; }
     @media (max-width: 850px) {
       .hero-grid { grid-template-columns: minmax(0, 1fr) 285px; gap: 25px; }
