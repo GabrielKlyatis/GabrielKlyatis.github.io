@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#fafbfc">
+  <meta name="description" content="Gabriel Klyatis — Robotics MSE student at the University of Pennsylvania. Interested in robotics, computer vision, machine learning, and bio-inspired multimodal perception.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gabriel Klyatis | Robotics &amp; Perception">
+  <meta property="og:description" content="Robotics MSE student at Penn GRASP Lab. Robotics, computer vision, machine learning, and bio-inspired sensing.">
+  <meta property="og:url" content="https://gabrielklyatis.github.io/">
+  <title>Gabriel Klyatis | Robotics &amp; Perception</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e4259'/%3E%3Ctext x='32' y='43' fill='white' font-family='Arial,sans-serif' font-size='27' font-weight='bold' text-anchor='middle'%3EGK%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #fdfdfc;
+      --surface: #ffffff;
+      --ink: #202a33;
+      --body: #465460;
+      --muted: #75828d;
+      --accent: #226c8b;
+      --accent-deep: #175670;
+      --line: #e6ebed;
+      --soft: #f3f7f8;
+      --radius: 14px;
+      --max: 1000px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: #cfe8ef; color: #122c39; }
+    a { color: var(--accent); text-decoration: none; text-underline-offset: 4px; }
+    a:hover { color: var(--accent-deep); text-decoration: underline; }
+    a:focus-visible { outline: 3px solid #8bc8dd; outline-offset: 4px; border-radius: 3px; }
+    .container { width: min(var(--max), calc(100% - 68px)); margin-inline: auto; }
+    .site-header { border-bottom: 1px solid var(--line); background: rgba(253,253,252,.97); }
+    .header-inner { min-height: 83px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-size: 17px; font-weight: 750; letter-spacing: -.42px; color: var(--ink); white-space: nowrap; }
+    .brand:hover { color: var(--ink); text-decoration: none; }
+    .nav { display: flex; gap: clamp(16px, 3vw, 30px); align-items: center; }
+    .nav a { font-size: 13px; font-weight: 600; letter-spacing: .02em; color: #596874; }
+    .nav a:hover { color: var(--accent); text-decoration: none; }
+    .hero { padding: 78px 0 67px; border-bottom: 1px solid var(--line); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 272px; align-items: center; gap: clamp(35px, 6vw, 94px); }
+    .eyebrow { display: inline-flex; gap: 10px; align-items: center; margin: 0 0 14px; color: var(--accent-deep); font-size: 11px; letter-spacing: .17em; font-weight: 800; text-transform: uppercase; }
+    .eyebrow::before { content: ""; display: block; width: 22px; height: 1px; background: var(--accent); }
+    h1 { font-size: clamp(32px, 4vw, 43px); font-weight: 760; letter-spacing: -1.65px; line-height: 1.25; margin: 0 0 13px; }
+    .hero-subtitle { font-weight: 640; font-size: 16px; letter-spacing: -.1px; color: #566572; margin: 0 0 26px; }
+    .intro { max-width: 700px; }
+    .intro p { margin: 0 0 16px; color: var(--body); font-size: 15px; line-height: 1.88; }
+    .intro p:last-child { margin-bottom: 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; margin-top: 26px; }
+    .button-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 39px; padding: 8px 15px; font-size: 13px; font-weight: 700; border: 1px solid #cddce2; color: #31576c; border-radius: 7px; background: #fff; transition: background-color .2s, border-color .2s; }
+    .button-link:hover { background: var(--soft); text-decoration: none; border-color: #aac9d5; }
+    .button-link.primary { background: #1e4259; color: #fff; border-color: #1e4259; }
+    .button-link.primary:hover { background: #163548; border-color: #163548; color: #fff; }
+    .button-link svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .photo-column { align-self: start; padding-top: 31px; }
+    .photo-frame { width: 100%; aspect-ratio: 0.91; position: relative; border: 1px solid #dfe9ec; border-radius: 13px; overflow: hidden; background: linear-gradient(150deg,#e8eff2 0%,#dbe7eb 100%); }
+    .photo-frame::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 5px rgba(255,255,255,.2); border-radius: inherit; pointer-events: none; }
+    .photo-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; position: relative; z-index: 1; }
+    .portrait-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 76px; font-weight: 720; color: #648091; letter-spacing: -4px; }
+    .photo-caption { margin-top: 13px; font-size: 11px; font-weight: 650; letter-spacing: .06em; text-align: center; color: #7b8b94; text-transform: uppercase; }
+    .section { padding: 56px 0 0; }
+    .section-heading { margin: 0 0 25px; display: flex; align-items: center; gap: 16px; font-size: 22px; font-weight: 750; letter-spacing: -.7px; }
+    .section-heading::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+    .section-lead { margin: -11px 0 27px; color: var(--body); font-size: 14px; }
+    .interest-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 15px; }
+    .interest-card { border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 22px 20px 20px; min-height: 191px; }
+    .interest-icon { display: flex; align-items: center; justify-content: center; width: 37px; height: 37px; background: var(--soft); color: var(--accent); border-radius: 9px; margin-bottom: 14px; }
+    .interest-icon svg { width: 19px; height: 19px; stroke: currentColor; stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .interest-card h3 { font-size: 15px; line-height: 1.35; letter-spacing: -.25px; margin: 0 0 9px; }
+    .interest-card p { margin: 0; font-size: 13px; line-height: 1.7; color: #687782; }
+    .background { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; }
+    .background h3 { margin: 0 0 18px; font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: #83939d; font-weight: 800; }
+    .timeline-item { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 0 0 24px; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-date { color: #83919b; font-size: 12px; font-weight: 680; padding-top: 2px; }
+    .timeline-body h4 { margin: 0 0 3px; line-height: 1.45; font-size: 15px; letter-spacing: -.15px; }
+    .timeline-body p { margin: 0; color: #6b7a86; font-size: 13px; line-height: 1.65; }
+    .project { display: flex; gap: 23px; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 23px; background: #fff; }
+    .project-badge { display: flex; align-items: center; justify-content: center; flex: 0 0 72px; height: 72px; background: #eef4f5; border-radius: 11px; color: #28617b; font-size: 19px; font-weight: 760; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .project h3 { margin: 1px 0 4px; font-size: 16px; letter-spacing: -.2px; line-height: 1.5; }
+    .project .meta { font-size: 12px; font-weight: 700; color: #8a989f; margin: 0 0 8px; }
+    .project p:last-child { margin: 0; font-size: 14px; color: #62727f; }
+    .contact-box { padding: 26px 29px; border: 1px solid #d9e5ea; border-radius: var(--radius); background: #f5f9fa; }
+    .contact-box p { color: var(--body); margin: 0 0 12px; font-size: 14px; }
+    .contact-box a { font-weight: 700; }
+    .footer { margin-top: 76px; border-top: 1px solid var(--line); }
+    .footer-inner { padding: 24px 0 30px; display: flex; justify-content: space-between; gap: 12px; color: #8b98a1; font-size: 12px; }
+    .footer a { color: #70818e; }
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: minmax(0, 1fr) 218px; gap: 30px; }
+      .photo-column { padding-top: 42px; }
+      .interest-grid { grid-template-columns: repeat(3, 1fr); gap: 11px; }
+      .interest-card { padding: 18px 15px; }
+    }
+    @media (max-width: 690px) {
+      .container { width: min(100% - 36px, var(--max)); }
+      .header-inner { min-height: 70px; }
+      .brand { font-size: 15px; }
+      .nav { gap: 14px; }
+      .nav a { font-size: 12px; }
+      .nav .desktop-only { display: none; }
+      .hero { padding: 41px 0 43px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+      .photo-column { width: min(230px, 65%); padding-top: 0; grid-row: 1; }
+      .photo-frame { aspect-ratio: 1; }
+      .photo-caption { display: none; }
+      .hero-subtitle { margin-bottom: 18px; }
+      .intro p { font-size: 14px; }
+      .section { padding-top: 43px; }
+      .section-heading { font-size: 20px; }
+      .interest-grid { grid-template-columns: 1fr; gap: 10px; }
+      .interest-card { display: grid; grid-template-columns: 39px 1fr; column-gap: 13px; min-height: unset; padding: 17px; }
+      .interest-icon { grid-row: span 2; margin-bottom: 0; }
+      .interest-card h3 { margin-bottom: 3px; }
+      .interest-card p { grid-column: 2; }
+      .background { grid-template-columns: 1fr; gap: 35px; }
+      .project { gap: 14px; padding: 18px; }
+      .project-badge { flex-basis: 50px; height: 50px; font-size: 14px; }
+      .footer-inner { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Gabriel Klyatis, back to top">Gabriel Klyatis<span style="color:#2e7a98">.</span></a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a class="desktop-only" href="#research">Research</a>
+        <a class="desktop-only" href="#background">Background</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" id="about" aria-labelledby="intro-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Robotics · Perception · Learning</p>
+          <h1 id="intro-title">Hi! I'm Gabriel Klyatis.</h1>
+          <p class="hero-subtitle">Robotics MSE Student · University of Pennsylvania</p>
+          <div class="intro">
+            <p>
+              I am a Robotics MSE student at the
+              <a href="https://www.grasp.upenn.edu/" target="_blank" rel="noopener noreferrer">GRASP Laboratory</a>
+              at the <a href="https://www.upenn.edu/" target="_blank" rel="noopener noreferrer">University of Pennsylvania</a>.
+              Prior to graduate school, I earned my B.Sc. in Electrical and Electronic Engineering from
+              <a href="https://english.tau.ac.il/" target="_blank" rel="noopener noreferrer">Tel Aviv University</a>
+              and worked as a software engineer at
+              <a href="https://www.magicleap.com/" target="_blank" rel="noopener noreferrer">Magic Leap</a>,
+              where I focused on embedded systems and low-level software development for augmented reality devices.
+            </p>
+            <p>
+              My research interests broadly lie at the intersection of robotics, computer vision, and machine learning,
+              particularly in developing intelligent perception and learning systems for autonomous robots.
+              I am especially interested in multimodal and bio-inspired sensing, including the integration of visual
+              and acoustic perception to enable robots to better understand, navigate, and interact with complex
+              real-world environments.
+            </p>
+          </div>
+          <div class="actions" aria-label="Profile links">
+            <a class="button-link primary" href="https://github.com/GabrielKlyatis" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.5-4.3-2-6-2m12 4v-3.87a3.38 3.38 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 3.77 5.07 5.07 0 0 0 18.91 0S17.73-.35 15 2.05a13.38 13.38 0 0 0-7 0C5.27-.35 4.09 0 4.09 0A5.07 5.07 0 0 0 4 3.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.38 3.38 0 0 0 8 17.13V21" transform="translate(1.25 1.5) scale(.91)"/></svg>
+              GitHub
+            </a>
+            <a class="button-link" href="mailto:gabrielklyatis@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              Email me
+            </a>
+          </div>
+        </div>
+        <aside class="photo-column" aria-label="Profile photo">
+          <div class="photo-frame">
+            <div class="portrait-fallback" aria-hidden="true">GK</div>
+            <!-- Replace this src with a local photo filename (e.g. profile.jpg) whenever you prefer. -->
+            <img src="https://github.com/GabrielKlyatis.png?size=540" alt="Gabriel Klyatis" loading="eager" onerror="this.style.display='none'">
+          </div>
+          <div class="photo-caption">University of Pennsylvania · GRASP</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <h2 class="section-heading" id="research-title">Research Interests</h2>
+        <p class="section-lead">I am interested in how robots can perceive, learn, and act reliably in the real world.</p>
+        <div class="interest-grid">
+          <article class="interest-card">
+            <div class="interest-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2"/></svg></div>
+            <h3>Robot Perception</h3>
+            <p>Visual understanding, sensing, and perception for autonomous systems.</p>
+          </article>
+          <article class="interest-card">
+            <div class="interest-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="15" rx="2"/><path d="m7 15 3-4 3 3 4-5"/><path d="M8 22h8M12 19v3"/></svg></div>
+            <h3>Vision &amp; Robot Learning</h3>
+            <p>Computer vision and machine learning for robust, adaptive autonomy.</p>
+          </article>
+          <article class="interest-card">
+            <div class="interest-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9v6m4-9v12m4-15v18m4-14v10m4-8v6m3-4v2"/></svg></div>
+            <h3>Bio-inspired Sensing</h3>
+            <p>Combining visual and acoustic signals to perceive complex environments.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="background" aria-labelledby="background-title">
+      <div class="container">
+        <h2 class="section-heading" id="background-title">Background</h2>
+        <div class="background">
+          <div>
+            <h3>Education</h3>
+            <div class="timeline-item">
+              <div class="timeline-date">2026–2028</div>
+              <div class="timeline-body">
+                <h4>University of Pennsylvania</h4>
+                <p>MSE in Robotics · GRASP Laboratory</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2024</div>
+              <div class="timeline-body">
+                <h4>Tel Aviv University</h4>
+                <p>B.Sc. in Electrical and Electronic Engineering</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3>Professional Experience</h3>
+            <div class="timeline-item">
+              <div class="timeline-date">2024–2026</div>
+              <div class="timeline-body">
+                <h4>Software Engineer, Core · Magic Leap</h4>
+                <p>Embedded software, real-time systems, and display pipeline optimization.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2023–2024</div>
+              <div class="timeline-body">
+                <h4>Software Engineering Intern · Magic Leap</h4>
+                <p>Device security, Android systems, and secure platform software.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 class="section-heading" id="projects-title">Selected Project</h2>
+        <article class="project">
+          <div class="project-badge" aria-hidden="true">C++</div>
+          <div>
+            <h3>Modular TCP/IP Stack</h3>
+            <p class="meta">B.Sc. Final Project · Advanced Computer Communications Laboratory</p>
+            <p>Designed and developed a modular C++ TCP/IP stack with more than 15,000 lines of implementation code and 1,700 lines of testing. The project supported a laboratory environment used by hundreds of electrical engineering and computer science students.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 class="section-heading" id="contact-title">Contact</h2>
+        <div class="contact-box">
+          <p>I'm always interested in connecting about robotics, perception, machine learning, and potential collaborations.</p>
+          <a href="mailto:gabrielklyatis@gmail.com">gabrielklyatis@gmail.com</a>
+          <span aria-hidden="true" style="color:#aab6bc;margin:0 10px">·</span>
+          <a href="https://github.com/GabrielKlyatis" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> Gabriel Klyatis. All rights reserved.</span>
+      <span>Built with GitHub Pages.</span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
